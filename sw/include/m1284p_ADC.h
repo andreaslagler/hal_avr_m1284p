@@ -220,7 +220,7 @@ namespace m1284p
         typedef BitInRegister<ADMUX, ADLAR> ADLAR_bit;
 
         // Analog Channel Selection Bits
-        typedef BitGroupInRegister<ADMUX, MUX0, MUX4> ChannelSelection> MUX;
+        typedef BitGroupInRegister<ADMUX, MUX0, MUX4, ChannelSelection> MUX;
 
         // ADC Enable
         typedef BitInRegister<ADCSRA, ADEN> ADEN_bit;
