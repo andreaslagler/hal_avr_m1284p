@@ -85,8 +85,8 @@ namespace m1284p
         /**
         @brief Initialization
         @param referenceSelection Selected ADC reference voltage
-        @param ePrescalerSelect Selected ADC clock pre-scaler
-        @param bInterruptEnable Flag indicating ADC interrupt on conversion complete is enabled
+        @param prescalerSelect Selected ADC clock pre-scaler
+        @param interruptEnable Flag indicating ADC interrupt on conversion complete is enabled
         @param autoTriggerEnable Flag indicating ADC is triggered automatically
         @param autoTriggerSource Selected source for auto trigger
         @param enableADC0 Flag indication ADC0 pin is configured as analog input pin,
@@ -100,8 +100,8 @@ namespace m1284p
         */
         static void init(
         const ReferenceSelection referenceSelection,
-        const PrescalerSelect ePrescalerSelect,
-        const bool bInterruptEnable,
+        const PrescalerSelect prescalerSelect,
+        const bool interruptEnable,
         const bool autoTriggerEnable,
         const AutoTriggerSource autoTriggerSource,
         const bool enableADC0,
@@ -120,8 +120,8 @@ namespace m1284p
             // ADC Control and Status Register A
             ADEN_bit::write(true);
             ADATE_bit::write(autoTriggerEnable);
-            ADIE_bit::write(bInterruptEnable);
-            ADPS::write(ePrescalerSelect);
+            ADIE_bit::write(interruptEnable);
+            ADPS::write(prescalerSelect);
 
             // ADC Control and Status Register B
             ADTS::write(autoTriggerSource);

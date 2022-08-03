@@ -110,6 +110,47 @@ namespace m1284p
             // Clear timer overflow interrupt enable flag
             TOIE::clear();
         }
+
+       /**
+        @brief Enable output compare A interrupt
+        */
+        static void enableOutputCompareAInterrupt() __attribute__((always_inline))
+        {
+            // Set timer overflow interrupt enable flag
+            OCIEA::set();
+        }
+        
+        /**
+        @brief Disable output compare A interrupt
+        */
+        static void disableOutputCompareAInterrupt() __attribute__((always_inline))
+        {
+            // Clear timer overflow interrupt enable flag
+            OCIEA::clear();
+        }
+        
+         /**
+        @brief Enable output compare B interrupt
+        */
+        static void enableOutputCompareBInterrupt() __attribute__((always_inline))
+        {
+            // Set timer overflow interrupt enable flag
+            OCIEB::set();
+        }
+        
+        /**
+        @brief Disable output compare B interrupt
+        */
+        static void disableOutputCompareBInterrupt() __attribute__((always_inline))
+        {
+            // Clear timer overflow interrupt enable flag
+            OCIEB::clear();
+        }
+        
+        static void writeOCRA(const uint16_t & value)
+        {
+            OCRA_Reg::write(value);
+        }
         
         private:
 
