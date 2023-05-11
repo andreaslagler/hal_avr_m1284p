@@ -72,7 +72,7 @@ namespace m1284p
         };
 
         ///@brief Slave Select Pin
-        typedef GPIOPin<Port::B, 2> SS_Pin;
+        typedef GPIOPin<Port::B, 4> SS_Pin;
         
         /**
         @brief Transmit a single byte
