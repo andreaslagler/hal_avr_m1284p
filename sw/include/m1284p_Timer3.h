@@ -159,8 +159,8 @@ namespace m1284p
         {
             static void write(const WaveformGenerationMode waveformGenerationMode)
             {
-                BitGroupInRegister<TCCR3A, WGM30, WGM31>::write(static_cast<uint8_t>(waveformGenerationMode) & 0b11);
-                BitGroupInRegister<TCCR3B, WGM32, WGM33>::write((static_cast<uint8_t>(waveformGenerationMode) & 0b11) << 2);
+                BitGroupInRegister<TCCR3A, WGM30, WGM31>::write(static_cast<uint8_t>(waveformGenerationMode));
+                BitGroupInRegister<TCCR3B, WGM32, WGM33>::write(static_cast<uint8_t>(waveformGenerationMode) >> 2);
             }
 
             static WaveformGenerationMode read()
