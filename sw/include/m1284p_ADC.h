@@ -105,13 +105,13 @@ namespace m1284p
         const bool autoTriggerEnable,
         const AutoTriggerSource autoTriggerSource,
         const bool enableADC0,
-        const bool enableADC1,
-        const bool enableADC2,
-        const bool enableADC3,
-        const bool enableADC4,
-        const bool enableADC5,
-        const bool enableADC6,
-        const bool enableADC7)
+        const bool enableADC1 = false,
+        const bool enableADC2 = false,
+        const bool enableADC3 = false,
+        const bool enableADC4 = false,
+        const bool enableADC5 = false,
+        const bool enableADC6 = false,
+        const bool enableADC7 = false)
         {
             // ADMUX register
             REFS::write(referenceSelection);
